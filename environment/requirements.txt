@@ -1,0 +1,6 @@
+# Feasibility probe — Python 3.12+
+jsonschema>=4.20,<5
+referencing>=0.35,<1
+
+# Live probe also needs ist2026b/fsm-repairability-study deps (ollama HTTP client, etc.)
+# Install there: pip install -r ../../ist2026b/fsm-repairability-study/environment/requirements.txt
