@@ -34,12 +34,16 @@ data/examples/**/*
 !data/examples/README.md
 !data/examples/.gitkeep
 
-results/**/*
-!results/README.md
+results/summaries/*
+!results/summaries/
 !results/summaries/README.md
 !results/summaries/.gitkeep
+results/tables/*
+!results/tables/
 !results/tables/README.md
 !results/tables/.gitkeep
+results/figures/*
+!results/figures/
 !results/figures/README.md
 !results/figures/.gitkeep
 
