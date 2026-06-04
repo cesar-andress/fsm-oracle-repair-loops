@@ -1,0 +1,22 @@
+{
+  "title": "fsm-oracle-repair-loops: Iterative Oracle-Guided Repair Infrastructure for LLM-Generated Finite State Machines",
+  "description": "Scaffold v0.1.0: reproducible infrastructure and documentation for iterative oracle-guided repair studies on LLM-generated FSMs. No frozen campaigns or empirical outcomes in this release.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Andrés, César",
+      "orcid": "0009-0001-8968-3404"
+    }
+  ],
+  "keywords": [
+    "finite state machines",
+    "oracle-guided repair",
+    "iterative repair",
+    "behavioural correctness",
+    "empirical software engineering",
+    "large language models",
+    "reproducibility"
+  ]
+}

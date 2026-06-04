@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs and scratch
+*.log
+logs/
+tmp/
+temp/
+scratch/
+work/
+.repro_work/
+
+# Campaign outputs (until explicitly frozen)
+experiments/**/runs/
+campaigns/
+campaign_logs/
+raw_logs/
+ollama_outputs/
+model_outputs/
+inference_logs/
+llm_outputs/
+
+# Private / manuscript (must not enter public repo)
+private/
+author_notes/
+paper/
+manuscript/
+submission/
+drafts/
+*.draft.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+secrets/
+credentials/
+*.local
