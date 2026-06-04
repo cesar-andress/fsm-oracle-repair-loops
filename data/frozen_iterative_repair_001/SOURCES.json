@@ -1,0 +1,31 @@
+{
+  "freeze_id": "frozen_iterative_repair_001",
+  "comparison_source": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_extended_comparison",
+  "model_runs": {
+    "qwen7b": {
+      "source_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen7b",
+      "repair_model": "qwen2.5-coder:7b"
+    },
+    "qwen14b": {
+      "source_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen14b",
+      "repair_model": "qwen2.5-coder:14b"
+    },
+    "qwen32b": {
+      "source_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b",
+      "repair_model": "qwen2.5-coder:32b"
+    },
+    "llama8b": {
+      "source_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_llama8b",
+      "repair_model": "llama3.1:8b"
+    },
+    "mistral12b": {
+      "source_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_mistral12b",
+      "repair_model": "mistral-nemo:12b"
+    },
+    "gemma9b": {
+      "source_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_gemma9b",
+      "repair_model": "gemma2:9b"
+    }
+  },
+  "manifest_source": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen7b"
+}

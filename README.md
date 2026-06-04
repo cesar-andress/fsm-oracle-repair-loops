@@ -1,8 +1,11 @@
 # fsm-oracle-repair-loops
 
-Public, Zenodo-ready artifact for **iterative oracle-guided repair** of LLM-generated finite state machines, companion to the EMSE manuscript *When Oracle Feedback Is Not Enough: Failure Modes and Model-Specific Gains in Iterative LLM Repair of Behavioural FSMs*.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20548450.svg)](https://doi.org/10.5281/zenodo.20548450)
+
+Public, Zenodo-archived artifact for **iterative oracle-guided repair** of LLM-generated finite state machines, companion to the EMSE manuscript *When Oracle Feedback Is Not Enough: Failure Modes and Model-Specific Gains in Iterative LLM Repair of Behavioural FSMs*.
 
 **Artifact version:** `v1.0.0`  
+**Zenodo:** [https://doi.org/10.5281/zenodo.20548450](https://doi.org/10.5281/zenodo.20548450)  
 **License:** [MIT](LICENSE)
 
 ## What is included
@@ -48,9 +51,11 @@ python3 scripts/generate_paper_figures.py
 
 **César Andrés** — ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404) — cesar.andress@ucjc.edu
 
-## Citation
+## Cite this artifact
 
-Zenodo DOI: **to be assigned** (placeholder). See [`CITATION.cff`](CITATION.cff) and [`docs/citation.md`](docs/citation.md).
+> Andrés, C. (2026). *fsm-oracle-repair-loops: Frozen Evidence for Iterative Oracle-Guided FSM Repair* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.20548450
+
+See [`CITATION.cff`](CITATION.cff) and [`docs/citation.md`](docs/citation.md) for BibTeX and machine-readable metadata.
 
 ## Documentation
 

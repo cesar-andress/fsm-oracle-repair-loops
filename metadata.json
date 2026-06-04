@@ -29,8 +29,9 @@
     "cross_model_improved_by_none": 28
   },
   "license": "MIT",
-  "doi_status": "pending",
-  "zenodo_doi": null,
+  "doi_status": "assigned",
+  "zenodo_doi": "10.5281/zenodo.20548450",
+  "zenodo_url": "https://doi.org/10.5281/zenodo.20548450",
   "repository": "https://github.com/cesar-andress/fsm-oracle-repair-loops",
   "release_tag": "v1.0.0"
 }

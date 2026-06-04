@@ -1,42 +1,72 @@
-# Reproducibility — fsm-oracle-repair-loops
+# Reproducibility — v1.0.0
 
-## Layout
+All commands assume the repository root `fsm-oracle-repair-loops/`.
 
-```text
-emse2026b/
-├── fsm-oracle-repair-loops/   # REPO_ROOT (this repository)
-├── paper/                     # PAPER_ROOT (internal manuscript)
-└── contribution/              # planning (non-public by default)
-```
-
-Use environment variables with **your** checkout paths—never commit absolute local paths.
-
-## v0.1.0
-
-No frozen data, Python package, or pytest suite is required yet. Verify scaffold files:
+## 1. Python environment
 
 ```bash
-cd path/to/fsm-oracle-repair-loops
-test -f CITATION.cff && test -f metadata.json && test -f docs/protocol.md
+python3 -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r environment/requirements.txt
 ```
 
-## Tier A (planned)
+**Dependencies:** `matplotlib` only (no pandas).
 
-After `data/frozen/` is populated:
+## 2. Verify checksums
 
-1. Install Python 3.12+ environment from future `environment/requirements.txt` or `pyproject.toml`.
-2. Run `pytest` on public fixtures under `data/examples/`.
-3. Execute analysis scripts in `scripts/` to refresh `results/summaries/`.
-4. Regenerate `results/tables/` and `results/figures/` for the companion `paper/` tree.
+```bash
+python3 scripts/verify_freeze.py
+```
 
-## Tier B (planned)
+**Expected:** `OK: 25 file(s) verified under data/frozen_iterative_repair_001`
 
-Optional Ollama-backed re-execution of iterative repair loops; outputs will differ from frozen LLM bytes.
+**Requires:** Python 3.8+ (for `matplotlib`); use `python3` on PATH or an explicit 3.11+ interpreter.
 
-## Manuscript alignment
+## 3. Print aggregate summary
 
-Export only records cited in the EMSE manuscript. Document checksums in release notes before tagging.
+```bash
+python3 scripts/summarize_freeze.py
+```
 
-## Citation
+**Expected highlights:**
 
-Replace `10.5281/zenodo.TBD` in `CITATION.cff` after Zenodo deposit.
+- Effective repair: qwen7b=3, qwen14b=5, qwen32b=9, others=0
+- Complete repair: 0 for all models
+- Cross-model: 17/45 improved by ≥1 model; 28/45 by none
+
+## 4. Regenerate tables
+
+```bash
+python3 scripts/generate_paper_tables.py
+```
+
+**Outputs:**
+
+- `tables/table_model_summary.tex`
+- `tables/table_cross_model_repairability.tex`
+- `tables/table_failure_taxonomy_by_model.tex`
+- `tables/table_system_specific_gains.tex`
+
+## 5. Regenerate figures
+
+```bash
+python3 scripts/generate_paper_figures.py
+```
+
+**Outputs:**
+
+- `figures/fig_effective_repairs_by_model.pdf`
+- `figures/fig_failure_taxonomy_by_model.pdf`
+
+## 6. Compare with shipped files (optional)
+
+```bash
+git diff tables/ figures/
+```
+
+After a clean run from an unmodified freeze, regenerated files should match the committed v1.0.0 copies (minor PDF binary drift from matplotlib is possible; re-verify numerics via `summarize_freeze.py`).
+
+## Data not required for Tier A
+
+- Internal paths listed in `data/frozen_iterative_repair_001/SOURCES.json`
+- Manuscript sources under `../paper/` (private companion tree)

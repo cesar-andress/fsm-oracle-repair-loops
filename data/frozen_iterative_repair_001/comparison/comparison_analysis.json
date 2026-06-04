@@ -1,0 +1,405 @@
+{
+  "output_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_extended_comparison",
+  "runs": {
+    "qwen7b": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen7b",
+    "qwen14b": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen14b",
+    "qwen32b": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b",
+    "llama8b": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_llama8b",
+    "mistral12b": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_mistral12b",
+    "gemma9b": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_gemma9b"
+  },
+  "per_model": {
+    "qwen7b": {
+      "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen7b",
+      "repair_model": "qwen2.5-coder:7b",
+      "cases_attempted": 45,
+      "cases_improved_at_any_iteration": 3,
+      "cases_regressed_at_any_iteration": 4,
+      "cases_complete_repair_at_any_iteration": 0,
+      "cases_effective_repair_at_any_iteration": 3,
+      "mean_initial_bpr": 0.3676470588235294,
+      "mean_best_bpr": 0.3754901960784314,
+      "mean_final_bpr": 0.3754901960784314,
+      "mean_delta_best_vs_initial": 0.007843137254901962,
+      "first_improvement_iteration_distribution": {
+        "none": 42,
+        "1": 3
+      },
+      "failure_taxonomy_normalized": {
+        "empty_patch": 36,
+        "duplicate_transition": 36,
+        "missing_transition_to_remove": 8,
+        "self_loop_rejected": 10,
+        "missing_state": 6,
+        "update_no_change": 2,
+        "invalid_patch_schema": 0,
+        "invalid_json": 0,
+        "schema_invalid": 0,
+        "runner_failure": 0,
+        "scoring_failure": 0,
+        "abstention": 0,
+        "other_patch_application_failure": 2,
+        "other": 0
+      },
+      "failure_events_total": 100
+    },
+    "qwen14b": {
+      "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen14b",
+      "repair_model": "qwen2.5-coder:14b",
+      "cases_attempted": 45,
+      "cases_improved_at_any_iteration": 5,
+      "cases_regressed_at_any_iteration": 0,
+      "cases_complete_repair_at_any_iteration": 0,
+      "cases_effective_repair_at_any_iteration": 5,
+      "mean_initial_bpr": 0.3676470588235294,
+      "mean_best_bpr": 0.42320261437908496,
+      "mean_final_bpr": 0.42320261437908496,
+      "mean_delta_best_vs_initial": 0.05555555555555555,
+      "first_improvement_iteration_distribution": {
+        "none": 40,
+        "1": 5
+      },
+      "failure_taxonomy_normalized": {
+        "empty_patch": 72,
+        "duplicate_transition": 19,
+        "missing_transition_to_remove": 0,
+        "self_loop_rejected": 0,
+        "missing_state": 0,
+        "update_no_change": 10,
+        "invalid_patch_schema": 0,
+        "invalid_json": 0,
+        "schema_invalid": 0,
+        "runner_failure": 0,
+        "scoring_failure": 0,
+        "abstention": 0,
+        "other_patch_application_failure": 5,
+        "other": 0
+      },
+      "failure_events_total": 106
+    },
+    "qwen32b": {
+      "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b",
+      "repair_model": "qwen2.5-coder:32b",
+      "cases_attempted": 45,
+      "cases_improved_at_any_iteration": 9,
+      "cases_regressed_at_any_iteration": 0,
+      "cases_complete_repair_at_any_iteration": 0,
+      "cases_effective_repair_at_any_iteration": 9,
+      "mean_initial_bpr": 0.3676470588235294,
+      "mean_best_bpr": 0.47091503267973855,
+      "mean_final_bpr": 0.47091503267973855,
+      "mean_delta_best_vs_initial": 0.10326797385620916,
+      "first_improvement_iteration_distribution": {
+        "none": 36,
+        "1": 9
+      },
+      "failure_taxonomy_normalized": {
+        "empty_patch": 76,
+        "duplicate_transition": 29,
+        "missing_transition_to_remove": 0,
+        "self_loop_rejected": 0,
+        "missing_state": 0,
+        "update_no_change": 15,
+        "invalid_patch_schema": 0,
+        "invalid_json": 0,
+        "schema_invalid": 0,
+        "runner_failure": 0,
+        "scoring_failure": 0,
+        "abstention": 0,
+        "other_patch_application_failure": 0,
+        "other": 0
+      },
+      "failure_events_total": 120
+    },
+    "llama8b": {
+      "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_llama8b",
+      "repair_model": "llama3.1:8b",
+      "cases_attempted": 45,
+      "cases_improved_at_any_iteration": 0,
+      "cases_regressed_at_any_iteration": 0,
+      "cases_complete_repair_at_any_iteration": 0,
+      "cases_effective_repair_at_any_iteration": 0,
+      "mean_initial_bpr": 0.3676470588235294,
+      "mean_best_bpr": 0.3676470588235294,
+      "mean_final_bpr": 0.3676470588235294,
+      "mean_delta_best_vs_initial": 0.0,
+      "first_improvement_iteration_distribution": {
+        "none": 45
+      },
+      "failure_taxonomy_normalized": {
+        "empty_patch": 4,
+        "duplicate_transition": 0,
+        "missing_transition_to_remove": 0,
+        "self_loop_rejected": 0,
+        "missing_state": 0,
+        "update_no_change": 0,
+        "invalid_patch_schema": 131,
+        "invalid_json": 0,
+        "schema_invalid": 0,
+        "runner_failure": 0,
+        "scoring_failure": 0,
+        "abstention": 0,
+        "other_patch_application_failure": 0,
+        "other": 0
+      },
+      "failure_events_total": 135
+    },
+    "mistral12b": {
+      "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_mistral12b",
+      "repair_model": "mistral-nemo:12b",
+      "cases_attempted": 45,
+      "cases_improved_at_any_iteration": 0,
+      "cases_regressed_at_any_iteration": 5,
+      "cases_complete_repair_at_any_iteration": 0,
+      "cases_effective_repair_at_any_iteration": 0,
+      "mean_initial_bpr": 0.3676470588235294,
+      "mean_best_bpr": 0.3676470588235294,
+      "mean_final_bpr": 0.3491285403050109,
+      "mean_delta_best_vs_initial": 0.0,
+      "first_improvement_iteration_distribution": {
+        "none": 45
+      },
+      "failure_taxonomy_normalized": {
+        "empty_patch": 15,
+        "duplicate_transition": 42,
+        "missing_transition_to_remove": 2,
+        "self_loop_rejected": 9,
+        "missing_state": 0,
+        "update_no_change": 6,
+        "invalid_patch_schema": 0,
+        "invalid_json": 0,
+        "schema_invalid": 0,
+        "runner_failure": 0,
+        "scoring_failure": 0,
+        "abstention": 0,
+        "other_patch_application_failure": 16,
+        "other": 0
+      },
+      "failure_events_total": 90
+    },
+    "gemma9b": {
+      "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_gemma9b",
+      "repair_model": "gemma2:9b",
+      "cases_attempted": 45,
+      "cases_improved_at_any_iteration": 0,
+      "cases_regressed_at_any_iteration": 0,
+      "cases_complete_repair_at_any_iteration": 0,
+      "cases_effective_repair_at_any_iteration": 0,
+      "mean_initial_bpr": 0.3676470588235294,
+      "mean_best_bpr": 0.3676470588235294,
+      "mean_final_bpr": 0.3676470588235294,
+      "mean_delta_best_vs_initial": 0.0,
+      "first_improvement_iteration_distribution": {
+        "none": 45
+      },
+      "failure_taxonomy_normalized": {
+        "empty_patch": 0,
+        "duplicate_transition": 0,
+        "missing_transition_to_remove": 0,
+        "self_loop_rejected": 0,
+        "missing_state": 0,
+        "update_no_change": 0,
+        "invalid_patch_schema": 121,
+        "invalid_json": 0,
+        "schema_invalid": 0,
+        "runner_failure": 0,
+        "scoring_failure": 0,
+        "abstention": 0,
+        "other_patch_application_failure": 4,
+        "other": 0
+      },
+      "failure_events_total": 125
+    }
+  },
+  "cross_model": {
+    "models": [
+      "gemma9b",
+      "llama8b",
+      "mistral12b",
+      "qwen14b",
+      "qwen32b",
+      "qwen7b"
+    ],
+    "cases_total": 45,
+    "cases_improved_by_at_least_one_model": 17,
+    "cases_improved_by_all_models": 0,
+    "cases_improved_only_by_one_model": 17,
+    "cases_improved_only_by_one_model_detail": [
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r01",
+        "model": "qwen7b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r02",
+        "model": "qwen7b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r03",
+        "model": "qwen7b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r01",
+        "model": "qwen14b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r02",
+        "model": "qwen14b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r03",
+        "model": "qwen14b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r04",
+        "model": "qwen14b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r05",
+        "model": "qwen14b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r02",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r03",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r04",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r05",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r01",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r02",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r03",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r04",
+        "model": "qwen32b"
+      },
+      {
+        "case_id": "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r05",
+        "model": "qwen32b"
+      }
+    ],
+    "cases_where_no_model_improved": 28,
+    "cases_where_no_model_improved_ids": [
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r01",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r02",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r03",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r04",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r05",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r01",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r02",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r03",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r04",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r05",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r01",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r02",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r03",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r04",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r05",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r04",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r05",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r01",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r02",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r03",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r04",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r05",
+      "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r01",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r01",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r02",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r03",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r04",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r05"
+    ],
+    "best_model_per_case": {
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r01": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r02": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r03": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r04": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r05": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r01": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r02": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r03": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r04": "gemma9b",
+      "repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r05": "gemma9b",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r01": "gemma9b",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r02": "gemma9b",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r03": "gemma9b",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r04": "gemma9b",
+      "repair__c2_core_ollama_behavioral__access_control__qwen2_5_coder_7b__r05": "gemma9b",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r01": "qwen7b",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r02": "qwen7b",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r03": "qwen7b",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r04": "gemma9b",
+      "repair__c2_core_ollama_behavioral__bike_rental__qwen2_5_coder_7b__r05": "gemma9b",
+      "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r01": "qwen14b",
+      "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r02": "qwen14b",
+      "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r03": "qwen14b",
+      "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r04": "qwen14b",
+      "repair__c2_core_ollama_behavioral__elevator__qwen2_5_coder_7b__r05": "qwen14b",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r01": "gemma9b",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r02": "gemma9b",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r03": "gemma9b",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r04": "gemma9b",
+      "repair__c2_core_ollama_behavioral__package_locker__qwen2_5_coder_7b__r05": "gemma9b",
+      "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r01": "gemma9b",
+      "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r02": "qwen32b",
+      "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r03": "qwen32b",
+      "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r04": "qwen32b",
+      "repair__c2_core_ollama_behavioral__parking_gate__qwen2_5_coder_7b__r05": "qwen32b",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r01": "gemma9b",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r02": "gemma9b",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r03": "gemma9b",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r04": "gemma9b",
+      "repair__c2_core_ollama_behavioral__train_ticket_booking__qwen2_5_coder_7b__r05": "gemma9b",
+      "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r01": "qwen32b",
+      "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r02": "qwen32b",
+      "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r03": "qwen32b",
+      "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r04": "qwen32b",
+      "repair__c2_core_ollama_behavioral__warehouse_inventory__qwen2_5_coder_7b__r05": "qwen32b"
+    },
+    "dominant_failure_class_overlap_all_models": [],
+    "dominant_failure_pairwise_overlap_counts": {
+      "gemma9b|llama8b": 1,
+      "gemma9b|mistral12b": 1,
+      "gemma9b|qwen14b": 0,
+      "gemma9b|qwen32b": 0,
+      "gemma9b|qwen7b": 0,
+      "llama8b|mistral12b": 0,
+      "llama8b|qwen14b": 0,
+      "llama8b|qwen32b": 0,
+      "llama8b|qwen7b": 0,
+      "mistral12b|qwen14b": 2,
+      "mistral12b|qwen32b": 3,
+      "mistral12b|qwen7b": 5,
+      "qwen14b|qwen32b": 2,
+      "qwen14b|qwen7b": 2,
+      "qwen32b|qwen7b": 3
+    },
+    "cases_same_dominant_failure_all_models": 0,
+    "failure_taxonomy_union_counts": {
+      "self_loop_rejected": 9,
+      "update_no_change": 8,
+      "duplicate_transition": 53,
+      "missing_transition_to_remove": 6,
+      "empty_patch": 85,
+      "missing_state": 1,
+      "invalid_patch_schema": 85,
+      "other_patch_application_failure": 10
+    }
+  }
+}

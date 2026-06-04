@@ -10,7 +10,11 @@ version: 1.0.0
 date-released: 2026-06-04
 license: MIT
 repository-code: "https://github.com/cesar-andress/fsm-oracle-repair-loops"
-doi: "to be assigned by Zenodo"
+doi: 10.5281/zenodo.20548450
+url: "https://doi.org/10.5281/zenodo.20548450"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20548450
 keywords:
   - finite state machines
   - large language models

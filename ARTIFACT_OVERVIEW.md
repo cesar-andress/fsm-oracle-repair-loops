@@ -1,60 +1,56 @@
-# Artifact overview — fsm-oracle-repair-loops v0.1.0
+# Artifact overview — v1.0.0
 
-## Repository purpose
+## Purpose
 
-**fsm-oracle-repair-loops** supports empirical software engineering studies of **iterative
-oracle-guided repair**: repeated score--diagnose--patch--validate loops on structurally
-acceptable yet behaviourally deficient LLM-generated FSMs.
+This repository publishes **frozen, checksum-backed aggregates** for the EMSE study of iterative oracle-guided repair on behavioural FSM slots. It supports verification and regeneration of paper tables/figures without re-running LLM inference.
 
-This is **not**:
-
-- a diagnostic-granularity (C/D/E) primary study;
-- a new FSM generation benchmark release;
-- a model leaderboard.
-
-It **builds on** prior benchmark, structural--behavioural correctness, and single-iteration repair
-protocol work by adding **iteration-budget** measurement and frozen loop records.
-
-## Author
-
-| Field | Value |
-|-------|--------|
-| Name | César Andrés |
-| ORCID | [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404) |
-| Email | cesar.andress@ucjc.edu |
-
-## v0.1.0 contents
-
-| Area | Status |
-|------|--------|
-| Metadata (`CITATION.cff`, `metadata.json`, `.zenodo.json`) | Present |
-| Documentation (`docs/`, `REPRODUCIBILITY.md`, release notes) | Present |
-| Directory layout (`data/`, `results/`, `scripts/`, …) | Scaffold only |
-| Frozen campaigns | **Not included** |
-| Empirical summaries | **Not included** |
-
-## Planned frozen layout
+## Frozen evidence (`data/frozen_iterative_repair_001/`)
 
 | Path | Role |
 |------|------|
-| `data/frozen/` | Campaign exports cited by the EMSE manuscript |
-| `data/examples/` | Minimal synthetic fixtures for schema smoke tests |
-| `results/summaries/` | Aggregated JSON/CSV readouts |
-| `results/tables/` | LaTeX or CSV for manuscript tables |
-| `results/figures/` | PDF or source for manuscript figures |
+| `manifest.json` | 45 shared repair slots (case IDs, initial BPR, structural eligibility) |
+| `selection_report.json` | Slot selection metadata from the qwen7b probe run |
+| `models/<key>/run_config.json` | Protocol per model (iterations, temperature, Ollama tag) |
+| `models/<key>/analysis.json` | Per-model aggregates |
+| `models/<key>/analysis_cases.csv` | Per-slot outcomes for one repair model |
+| `comparison/comparison_analysis.json` | **Primary source** for paper numbers (per-model + cross-model) |
+| `comparison/comparison_*.csv` | Tabular exports used to build LaTeX tables |
+| `SOURCES.json` | Provenance paths to internal probe directories (read-only reference) |
+| `FREEZE_REPORT.md` | Human-readable freeze summary |
+| `SHA256SUMS.txt` | Integrity checksums for all bundled JSON/CSV files |
 
-## Reproduction tiers (planned)
+**Freeze ID:** `frozen_iterative_repair_001`
 
-**Tier A** — Regenerate summaries, tables, and figures from `data/frozen/` without re-invoking the LLM.
+## Model runs (`models/`)
 
-**Tier B** — Optional re-execution of repair loops (documented stochastic divergence from freezes).
+Six directories — `qwen7b`, `qwen14b`, `qwen32b`, `llama8b`, `mistral12b`, `gemma9b` — each holding aggregated results for the **same 45 slots** under identical protocol settings.
 
-See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
+## Comparison outputs (`comparison/`)
 
-## Companion paper
+- `comparison_analysis.json` — slot-level cross-model statistics (17/45 improved, 28/45 none, etc.)
+- CSV companions for model summary, per-case matrix, and failure taxonomy
 
-Internal manuscript: `../paper/` (Empirical Software Engineering).
+## Checksums
 
-## Citation
+- **Canonical:** `data/frozen_iterative_repair_001/SHA256SUMS.txt`
+- **Mirror:** `checksums/SHA256SUMS.txt` (identical content for reviewers)
 
-Use [`CITATION.cff`](CITATION.cff). At v0.1.0 cite as **infrastructure scaffold only**, not as empirical evidence.
+Verify with `python3 scripts/verify_freeze.py`.
+
+## Paper mapping
+
+| Manuscript asset | Artifact path |
+|------------------|---------------|
+| Table: model summary | `tables/table_model_summary.tex` |
+| Table: cross-model | `tables/table_cross_model_repairability.tex` |
+| Table: failure taxonomy | `tables/table_failure_taxonomy_by_model.tex` |
+| Table: system-specific gains | `tables/table_system_specific_gains.tex` |
+| Figure: effective repairs | `figures/fig_effective_repairs_by_model.pdf` |
+| Figure: failure taxonomy | `figures/fig_failure_taxonomy_by_model.pdf` |
+
+Regenerate via `scripts/generate_paper_tables.py` and `scripts/generate_paper_figures.py`.
+
+## Reproduction tiers
+
+1. **Tier A (this release):** Verify checksums → read summaries → regenerate tables/figures.
+2. **Tier B (out of scope):** Re-run Ollama repair probes (requires internal infrastructure; not redistributed).

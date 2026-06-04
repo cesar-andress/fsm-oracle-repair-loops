@@ -1,0 +1,10 @@
+{
+  "probe_id": "iterative_repair_probe_001",
+  "mode": "live",
+  "model": "gemma2:9b",
+  "max_iterations": 3,
+  "temperature": 0.0,
+  "repair_condition": "patch_trace_feedback",
+  "repair_repo": "/home/cesar/papers/ist2026b/fsm-repairability-study",
+  "started_at": "2026-06-04T12:49:44Z"
+}

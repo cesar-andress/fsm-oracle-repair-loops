@@ -1,0 +1,7 @@
+model,probe_dir,repair_model,cases_attempted,cases_improved_at_any_iteration,cases_regressed_at_any_iteration,cases_complete_repair_at_any_iteration,cases_effective_repair_at_any_iteration,mean_initial_bpr,mean_best_bpr,mean_final_bpr,mean_delta_best_vs_initial,failure_events_total
+gemma9b,/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_gemma9b,gemma2:9b,45,0,0,0,0,0.3676470588235294,0.3676470588235294,0.3676470588235294,0.0,125
+llama8b,/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_llama8b,llama3.1:8b,45,0,0,0,0,0.3676470588235294,0.3676470588235294,0.3676470588235294,0.0,135
+mistral12b,/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_mistral12b,mistral-nemo:12b,45,0,5,0,0,0.3676470588235294,0.3676470588235294,0.3491285403050109,0.0,90
+qwen14b,/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen14b,qwen2.5-coder:14b,45,5,0,0,5,0.3676470588235294,0.42320261437908496,0.42320261437908496,0.05555555555555555,106
+qwen32b,/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b,qwen2.5-coder:32b,45,9,0,0,9,0.3676470588235294,0.47091503267973855,0.47091503267973855,0.10326797385620916,120
+qwen7b,/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen7b,qwen2.5-coder:7b,45,3,4,0,3,0.3676470588235294,0.3754901960784314,0.3754901960784314,0.007843137254901962,100

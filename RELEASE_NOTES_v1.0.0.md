@@ -20,9 +20,13 @@
 - Complete repair: 0/45 for all models
 - Cross-model: 17/45 improved by ≥1 model; 28/45 by none
 
+## Zenodo archive
+
+- **DOI:** [10.5281/zenodo.20548450](https://doi.org/10.5281/zenodo.20548450)
+- **Version:** v1.0.0 (2026-06-04)
+
 ## Not in this release
 
-- Zenodo DOI (pending deposit)
 - Raw LLM run logs or case-level FSM inputs (see `SOURCES.json` provenance only)
 
 ## Replaces

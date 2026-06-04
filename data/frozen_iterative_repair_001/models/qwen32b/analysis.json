@@ -1,0 +1,92 @@
+{
+  "probe_dir": "/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b",
+  "probe_id": "iterative_repair_probe_001",
+  "mode": "live",
+  "dry_run": false,
+  "max_iterations_configured": 3,
+  "per_iteration_summary": {
+    "1": {
+      "attempted": 45,
+      "scored": 45,
+      "improved_vs_previous": 9,
+      "improved_vs_initial": 9,
+      "unchanged_vs_previous": 36,
+      "regressed_vs_previous": 0,
+      "complete_repairs": 0,
+      "mean_delta_bpr_vs_previous": 0.10326797385620916,
+      "mean_delta_bpr_vs_initial": 0.10326797385620916
+    },
+    "2": {
+      "attempted": 45,
+      "scored": 45,
+      "improved_vs_previous": 0,
+      "improved_vs_initial": 9,
+      "unchanged_vs_previous": 45,
+      "regressed_vs_previous": 0,
+      "complete_repairs": 0,
+      "mean_delta_bpr_vs_previous": 0.0,
+      "mean_delta_bpr_vs_initial": 0.10326797385620916
+    },
+    "3": {
+      "attempted": 45,
+      "scored": 45,
+      "improved_vs_previous": 0,
+      "improved_vs_initial": 9,
+      "unchanged_vs_previous": 45,
+      "regressed_vs_previous": 0,
+      "complete_repairs": 0,
+      "mean_delta_bpr_vs_previous": 0.0,
+      "mean_delta_bpr_vs_initial": 0.10326797385620916
+    }
+  },
+  "failure_taxonomy_normalized": {
+    "empty_patch": 76,
+    "duplicate_transition": 29,
+    "missing_transition_to_remove": 0,
+    "self_loop_rejected": 0,
+    "missing_state": 0,
+    "update_no_change": 15,
+    "invalid_patch_schema": 0,
+    "invalid_json": 0,
+    "schema_invalid": 0,
+    "runner_failure": 0,
+    "scoring_failure": 0,
+    "abstention": 0,
+    "other_patch_application_failure": 0,
+    "other": 0
+  },
+  "raw_failure_examples": {
+    "empty_patch": [
+      "patch_generation:patch validation failed: patch schema validation failed: [] should be non-empty"
+    ],
+    "duplicate_transition": [
+      "patch_apply_or_runner:Command '['/home/cesar/papers/emse2026b/fsm-oracle-repair-loops/.venv/bin/python3.12', '/home/cesar/papers/ist2026b/fsm-repairability-study/scripts/apply_patch.py', '--fsm', '/home/cesar/papers/ist2026b/paper/experiments/repair_cases_diverse_090/repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r01/candidate_fsm.json', '--patch', '/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b/cases/repair__c1_pilot_ollama_behavi... | stderr: operation[0] add_transition: duplicate (from, event) ('Idle', 'coin_inserted'); existing target 'CreditAvailable'   at operation index: 0   operation: {\"event\": \"coin_inserted\", \"from\": \"Idle\", \"op\": \"add_transition\", \"to\": \"CreditAvailable\"}",
+      "patch_apply_or_runner:Command '['/home/cesar/papers/emse2026b/fsm-oracle-repair-loops/.venv/bin/python3.12', '/home/cesar/papers/ist2026b/fsm-repairability-study/scripts/apply_patch.py', '--fsm', '/home/cesar/papers/ist2026b/paper/experiments/repair_cases_diverse_090/repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r02/candidate_fsm.json', '--patch', '/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b/cases/repair__c1_pilot_ollama_behavi... | stderr: operation[0] add_transition: duplicate (from, event) ('Idle', 'coin_inserted'); existing target 'CreditAvailable'   at operation index: 0   operation: {\"event\": \"coin_inserted\", \"from\": \"Idle\", \"op\": \"add_transition\", \"to\": \"CreditAvailable\"}",
+      "patch_apply_or_runner:Command '['/home/cesar/papers/emse2026b/fsm-oracle-repair-loops/.venv/bin/python3.12', '/home/cesar/papers/ist2026b/fsm-repairability-study/scripts/apply_patch.py', '--fsm', '/home/cesar/papers/ist2026b/paper/experiments/repair_cases_diverse_090/repair__c1_pilot_ollama_behavioral__vending_machine__qwen2_5_coder_7b__r03/candidate_fsm.json', '--patch', '/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b/cases/repair__c1_pilot_ollama_behavi... | stderr: operation[0] add_transition: duplicate (from, event) ('Idle', 'coin_inserted'); existing target 'CreditAvailable'   at operation index: 0   operation: {\"event\": \"coin_inserted\", \"from\": \"Idle\", \"op\": \"add_transition\", \"to\": \"CreditAvailable\"}"
+    ],
+    "update_no_change": [
+      "patch_apply_or_runner:Command '['/home/cesar/papers/emse2026b/fsm-oracle-repair-loops/.venv/bin/python3.12', '/home/cesar/papers/ist2026b/fsm-repairability-study/scripts/apply_patch.py', '--fsm', '/home/cesar/papers/ist2026b/paper/experiments/repair_cases_diverse_090/repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r01/candidate_fsm.json', '--patch', '/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b/cases/repair__c1_pilot_ollama_behaviora... | stderr: operation[1] update_transition: old_to and new_to must differ (both 'LoggedOut')   at operation index: 1   operation: {\"event\": \"login_failed\", \"from\": \"Authenticating\", \"new_to\": \"LoggedOut\", \"old_to\": \"LoggedOut\", \"op\": \"update_transition\"}",
+      "patch_apply_or_runner:Command '['/home/cesar/papers/emse2026b/fsm-oracle-repair-loops/.venv/bin/python3.12', '/home/cesar/papers/ist2026b/fsm-repairability-study/scripts/apply_patch.py', '--fsm', '/home/cesar/papers/ist2026b/paper/experiments/repair_cases_diverse_090/repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r02/candidate_fsm.json', '--patch', '/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b/cases/repair__c1_pilot_ollama_behaviora... | stderr: operation[1] update_transition: old_to and new_to must differ (both 'LoggedOut')   at operation index: 1   operation: {\"event\": \"login_failed\", \"from\": \"Authenticating\", \"new_to\": \"LoggedOut\", \"old_to\": \"LoggedOut\", \"op\": \"update_transition\"}",
+      "patch_apply_or_runner:Command '['/home/cesar/papers/emse2026b/fsm-oracle-repair-loops/.venv/bin/python3.12', '/home/cesar/papers/ist2026b/fsm-repairability-study/scripts/apply_patch.py', '--fsm', '/home/cesar/papers/ist2026b/paper/experiments/repair_cases_diverse_090/repair__c1_pilot_ollama_behavioral__login_system__qwen2_5_coder_7b__r04/candidate_fsm.json', '--patch', '/home/cesar/papers/emse2026b/paper/experiments/iterative_repair_probe_003_45_qwen32b/cases/repair__c1_pilot_ollama_behaviora... | stderr: operation[1] update_transition: old_to and new_to must differ (both 'LoggedOut')   at operation index: 1   operation: {\"event\": \"login_failed\", \"from\": \"Authenticating\", \"new_to\": \"LoggedOut\", \"old_to\": \"LoggedOut\", \"op\": \"update_transition\"}"
+    ]
+  },
+  "failure_events_total": 120,
+  "metrics_source": "analysis_cases.csv",
+  "cases_attempted": 45,
+  "cases_improved_at_any_iteration": 9,
+  "cases_regressed_at_any_iteration": 0,
+  "cases_complete_repair_at_any_iteration": 0,
+  "cases_effective_repair_at_any_iteration": 9,
+  "mean_initial_bpr": 0.3676470588235294,
+  "mean_best_bpr": 0.47091503267973855,
+  "mean_final_bpr": 0.47091503267973855,
+  "mean_delta_best_vs_initial": 0.10326797385620916,
+  "first_improvement_iteration_distribution": {
+    "none": 36,
+    "1": 9
+  },
+  "consistency_checks": {
+    "ok": true,
+    "issues": []
+  }
+}

@@ -1,0 +1,40 @@
+% Auto-generated from data/frozen_iterative_repair_001 (paper layout)
+\begin{table}[htbp]
+\centering
+\caption{Failure-event counts by repair model (row abbreviations).}
+\label{tab:failure-taxonomy}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}l@{\hspace{2pt}}*{6}{r@{\hspace{2pt}}}@{}}
+\toprule
+Failure & qwen7b & qwen14b & qwen32b & llama8b & mistral12b & gemma9b \\
+\midrule
+empty & 36 & 72 & 76 & 4 & 15 & 0 \\
+duplicate & 36 & 19 & 29 & 0 & 42 & 0 \\
+missing edge & 8 & 0 & 0 & 0 & 2 & 0 \\
+self-loop & 10 & 0 & 0 & 0 & 9 & 0 \\
+missing state & 6 & 0 & 0 & 0 & 0 & 0 \\
+no-op update & 2 & 10 & 15 & 0 & 6 & 0 \\
+schema & 0 & 0 & 0 & 131 & 0 & 121 \\
+other apply & 2 & 5 & 0 & 0 & 16 & 4 \\
+\bottomrule
+\end{tabular}
+
+\medskip
+{\footnotesize
+\textit{Note.}
+Row labels abbreviate canonical failure classes:
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=2pt,parsep=0pt]
+  \item empty $\rightarrow$ \texttt{empty\_patch}
+  \item schema $\rightarrow$ \texttt{invalid\_patch\_schema}
+  \item duplicate $\rightarrow$ \texttt{duplicate\_transition}
+  \item missing edge $\rightarrow$ \texttt{missing\_transition\_to\_remove}
+  \item self-loop $\rightarrow$ \texttt{self\_loop\_rejected}
+  \item missing state $\rightarrow$ \texttt{missing\_state}
+  \item no-op update $\rightarrow$ \texttt{update\_no\_change}
+  \item other apply $\rightarrow$ \texttt{other\_patch\_application\_failure}
+\end{itemize}
+}
+\end{table}
+
