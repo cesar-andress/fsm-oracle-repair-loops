@@ -1,27 +1,36 @@
 {
-  "schema_version": "1.0.0",
-  "repository_name": "fsm-oracle-repair-loops",
-  "working_title": "Iterative Oracle-Guided Repair of LLM-Generated Finite State Machines: From Structural Acceptance to Behavioural Recovery",
-  "target_venue": "Empirical Software Engineering",
-  "study_type": "iterative oracle-guided repair",
-  "version": "0.1.0",
-  "release_label": "v0.1.0 – infrastructure scaffold",
-  "license": "MIT",
-  "status": "scaffolding",
-  "authors": [
-    {
-      "name": "César Andrés",
-      "orcid": "0009-0001-8968-3404",
-      "email": "cesar.andress@ucjc.edu",
-      "affiliation": "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, Madrid, Spain"
-    }
+  "title": "fsm-oracle-repair-loops",
+  "version": "1.0.0",
+  "paper_title": "When Oracle Feedback Is Not Enough: Failure Modes and Model-Specific Gains in Iterative LLM Repair of Behavioural FSMs",
+  "artifact_type": "frozen_empirical_evidence",
+  "freeze_id": "frozen_iterative_repair_001",
+  "models": [
+    "qwen7b",
+    "qwen14b",
+    "qwen32b",
+    "llama8b",
+    "mistral12b",
+    "gemma9b"
   ],
-  "archive": {
-    "zenodo_doi": "10.5281/zenodo.TBD",
-    "zenodo_url": "https://doi.org/10.5281/zenodo.TBD",
-    "github_repository": "https://github.com/cesar-andress/fsm-oracle-repair-loops",
-    "github_release": null
+  "cases": 45,
+  "iterations": 3,
+  "temperature": 0,
+  "key_results": {
+    "effective_repair": {
+      "qwen7b": 3,
+      "qwen14b": 5,
+      "qwen32b": 9,
+      "llama8b": 0,
+      "mistral12b": 0,
+      "gemma9b": 0
+    },
+    "complete_repair_all_models": 0,
+    "cross_model_improved_by_at_least_one": 17,
+    "cross_model_improved_by_none": 28
   },
-  "companion_paper_path": "../paper",
-  "planning_path": "../contribution"
+  "license": "MIT",
+  "doi_status": "pending",
+  "zenodo_doi": null,
+  "repository": "https://github.com/cesar-andress/fsm-oracle-repair-loops",
+  "release_tag": "v1.0.0"
 }

@@ -1,28 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this artifact, please cite it as below."
-title: "fsm-oracle-repair-loops: Iterative Oracle-Guided Repair of LLM-Generated Finite State Machines"
-version: "0.1.0"
+title: "fsm-oracle-repair-loops: Frozen Evidence for Iterative Oracle-Guided FSM Repair"
+message: "If you use this artifact, please cite it using the metadata from this file."
 type: software
 authors:
-  - family-names: "Andrés"
-    given-names: "César"
+  - family-names: Andrés
+    given-names: César
     orcid: "https://orcid.org/0009-0001-8968-3404"
-    email: "cesar.andress@ucjc.edu"
-    affiliation: "CRIA-BDHS Research Group, Higher Polytechnic School of Technology and Science, Universidad Camilo José Cela, Madrid, Spain"
-date-released: "2026-06-04"
+version: 1.0.0
+date-released: 2026-06-04
 license: MIT
-doi: 10.5281/zenodo.TBD
 repository-code: "https://github.com/cesar-andress/fsm-oracle-repair-loops"
-url: "https://doi.org/10.5281/zenodo.TBD"
-abstract: >-
-  Public artifact for empirical studies of iterative oracle-guided repair of
-  LLM-generated finite state machines. Release v0.1.0 provides repository layout,
-  metadata, and documentation only; no frozen campaigns or empirical outcomes.
+doi: "to be assigned by Zenodo"
 keywords:
   - finite state machines
-  - oracle-guided repair
-  - iterative repair
-  - behavioural correctness
-  - empirical software engineering
   - large language models
+  - oracle-guided repair
+  - empirical software engineering
   - reproducibility
