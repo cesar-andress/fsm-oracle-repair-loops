@@ -1,5 +1,13 @@
 # Artifact overview — v1.0.0
 
+## Archived artifact
+
+The frozen artifact for *When Oracle Feedback Is Not Enough: Failure Modes and Model-Specific Gains in Iterative LLM Repair of Behavioural FSMs* is permanently archived on Zenodo:
+
+**DOI:** [https://doi.org/10.5281/zenodo.20548450](https://doi.org/10.5281/zenodo.20548450)
+
+The archive contains `frozen_iterative_repair_001`, model-level analyses, comparison outputs, paper tables and figures, and checksum-backed reproducibility material. **This archive is the authoritative source for all results reported in the manuscript.**
+
 ## Purpose
 
 This repository publishes **frozen, checksum-backed aggregates** for the EMSE study of iterative oracle-guided repair on behavioural FSM slots. It supports verification and regeneration of paper tables/figures without re-running LLM inference.

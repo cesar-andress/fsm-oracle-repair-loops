@@ -8,6 +8,22 @@ Public, Zenodo-archived artifact for **iterative oracle-guided repair** of LLM-g
 **Zenodo:** [https://doi.org/10.5281/zenodo.20548450](https://doi.org/10.5281/zenodo.20548450)  
 **License:** [MIT](LICENSE)
 
+## Archived artifact
+
+The frozen artifact associated with the paper *When Oracle Feedback Is Not Enough: Failure Modes and Model-Specific Gains in Iterative LLM Repair of Behavioural FSMs* has been permanently archived on Zenodo:
+
+**DOI:** [https://doi.org/10.5281/zenodo.20548450](https://doi.org/10.5281/zenodo.20548450)
+
+The archive contains:
+
+- `frozen_iterative_repair_001`
+- model-level analyses
+- comparison outputs
+- paper tables and figures
+- checksum-backed reproducibility material
+
+The archived artifact is the **authoritative source** for all results reported in the manuscript.
+
 ## What is included
 
 - **Frozen evidence** — `data/frozen_iterative_repair_001/` (45 shared slots, six local repair models, three iterations at temperature 0)
