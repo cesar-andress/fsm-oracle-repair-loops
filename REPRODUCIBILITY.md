@@ -1,63 +1,42 @@
-# Reproducibility — fsm-oracle-repair-loops v0.1.0
+# Reproducibility — fsm-oracle-repair-loops
 
-This document describes how to reproduce artefact outputs once the iterative repair
-infrastructure and frozen campaigns exist. **Release v0.1.0 is a scaffold only:**
-no empirical campaigns, frozen JSON summaries, or manuscript tables are shipped yet.
-
-## Layout (sibling directories)
+## Layout
 
 ```text
 emse2026b/
-├── fsm-oracle-repair-loops/    ← REPO_ROOT (this repository; public / Zenodo)
-└── paper/                      ← PAPER_ROOT (internal manuscript; not redistributed)
+├── fsm-oracle-repair-loops/   # REPO_ROOT (this repository)
+├── paper/                     # PAPER_ROOT (internal manuscript)
+└── contribution/              # planning (non-public by default)
 ```
 
-Use **relative** paths in commands and documentation. Do not embed workstation-specific absolute paths in published artefacts.
+Use environment variables with **your** checkout paths—never commit absolute local paths.
 
-## Environment setup (when `environment/requirements.txt` exists)
+## v0.1.0
+
+No frozen data, Python package, or pytest suite is required yet. Verify scaffold files:
 
 ```bash
-export REPO_ROOT="path/to/fsm-oracle-repair-loops"
-export PAPER_ROOT="path/to/paper"
-
-cd "$REPO_ROOT"
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r environment/requirements.txt
-python -m pytest
+cd path/to/fsm-oracle-repair-loops
+test -f CITATION.cff && test -f metadata.json && test -f docs/protocol.md
 ```
 
-## Tier A — regenerate manuscript artefacts from frozen data (planned)
+## Tier A (planned)
 
-After frozen campaigns are deposited under `experiments/frozen/`:
+After `data/frozen/` is populated:
 
-1. Verify required summary files and run manifests (checklist TBD per campaign).
-2. Run analysis scripts (to be added under `scripts/`) to emit JSON/CSV summaries.
-3. Run table/figure generators with `--paper-root "$PAPER_ROOT"` when implemented.
+1. Install Python 3.12+ environment from future `environment/requirements.txt` or `pyproject.toml`.
+2. Run `pytest` on public fixtures under `data/examples/`.
+3. Execute analysis scripts in `scripts/` to refresh `results/summaries/`.
+4. Regenerate `results/tables/` and `results/figures/` for the companion `paper/` tree.
 
-**v0.1.0:** Steps above are not yet available; there is nothing to regenerate.
+## Tier B (planned)
 
-## Tier B — re-execute LLM repair loops (planned)
+Optional Ollama-backed re-execution of iterative repair loops; outputs will differ from frozen LLM bytes.
 
-Optional re-execution with a local Ollama (or documented API) model will be described in
-`docs/experimental_setup.md` when the iteration driver lands.
+## Manuscript alignment
 
-Re-runs are expected to differ stochastically from frozen records; Tier A remains the audit path for paper claims.
-
-## Infrastructure smoke test (planned for v0.1.1+)
-
-A minimal deterministic pipeline (score → diagnose → apply patch → record `repair_run` with
-`iteration_index`) will be verified with fixtures under `tests/fixtures/` without network access.
+Export only records cited in the EMSE manuscript. Document checksums in release notes before tagging.
 
 ## Citation
 
-Until Zenodo deposit, cite the repository URL and version tag **v0.1.0** as infrastructure scaffold only — not as evidence of study outcomes.
-
-After deposit, update this section with the assigned DOI (replace `10.5281/zenodo.TBD` in `CITATION.cff`).
-
-## Related documents
-
-- [`ARTIFACT_SCOPE.md`](ARTIFACT_SCOPE.md)
-- [`RELEASE_NOTES_v0.1.0.md`](RELEASE_NOTES_v0.1.0.md)
-- [`docs/citation.md`](docs/citation.md)
+Replace `10.5281/zenodo.TBD` in `CITATION.cff` after Zenodo deposit.

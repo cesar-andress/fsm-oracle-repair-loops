@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite it as below."
-title: "fsm-oracle-repair-loops: Iterative Oracle-Guided Repair Infrastructure for LLM-Generated Finite State Machines"
+title: "fsm-oracle-repair-loops: Iterative Oracle-Guided Repair of LLM-Generated Finite State Machines"
 version: "0.1.0"
 type: software
 authors:
@@ -15,11 +15,9 @@ doi: 10.5281/zenodo.TBD
 repository-code: "https://github.com/cesar-andress/fsm-oracle-repair-loops"
 url: "https://doi.org/10.5281/zenodo.TBD"
 abstract: >-
-  Scaffold release (v0.1.0): public repository for studying iterative
-  oracle-guided repair of LLM-generated finite state machines. This tag
-  documents project scope, metadata, and reproducibility policy only; it
-  does not include frozen campaigns or empirical repair outcomes. Companion
-  EMSE manuscript sources are maintained separately.
+  Public artifact for empirical studies of iterative oracle-guided repair of
+  LLM-generated finite state machines. Release v0.1.0 provides repository layout,
+  metadata, and documentation only; no frozen campaigns or empirical outcomes.
 keywords:
   - finite state machines
   - oracle-guided repair

@@ -1,16 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "repository": {
-    "name": "fsm-oracle-repair-loops",
-    "public_name": "fsm-oracle-repair-loops",
-    "policy_alias": "repo-externo",
-    "version": "0.1.0",
-    "release_label": "v0.1.0 – infrastructure scaffold",
-    "license": "MIT",
-    "status": "scaffolding"
-  },
-  "title": "fsm-oracle-repair-loops: Iterative Oracle-Guided Repair Infrastructure for LLM-Generated Finite State Machines",
-  "manuscript_working_title": "Iterative Oracle-Guided Repair of LLM-Generated Finite State Machines: From Structural Acceptance to Behavioural Recovery",
+  "repository_name": "fsm-oracle-repair-loops",
+  "working_title": "Iterative Oracle-Guided Repair of LLM-Generated Finite State Machines: From Structural Acceptance to Behavioural Recovery",
+  "target_venue": "Empirical Software Engineering",
+  "study_type": "iterative oracle-guided repair",
+  "version": "0.1.0",
+  "release_label": "v0.1.0 – infrastructure scaffold",
+  "license": "MIT",
+  "status": "scaffolding",
   "authors": [
     {
       "name": "César Andrés",
@@ -26,12 +23,5 @@
     "github_release": null
   },
   "companion_paper_path": "../paper",
-  "lineage": {
-    "builds_on": [
-      "FSM-Bench-20",
-      "behavioral-fsm-benchmark",
-      "fsm-repairability-study"
-    ],
-    "does_not_bundle_prior_frozen_data_by_default": true
-  }
+  "planning_path": "../contribution"
 }

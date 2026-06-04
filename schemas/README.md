@@ -1,3 +1,3 @@
-# Schemas
+# schemas
 
-JSON Schema definitions for FSMs, oracle suites, diagnostics, patches, and iteration-aware `repair_run` records will be added in a subsequent release.
+JSON Schema for FSMs, oracles, diagnostics, patches, and iteration-aware repair runs (planned).

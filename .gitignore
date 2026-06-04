@@ -1,62 +1,49 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-.Python
-build/
-dist/
-*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.coverage
-htmlcov/
-
-# Virtual environments
-.env
-.venv
-env/
+.venv/
 venv/
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*~
-
-# Logs and scratch
-*.log
-logs/
+# Scratch and campaigns (until frozen export)
 tmp/
-temp/
 scratch/
-work/
-.repro_work/
-
-# Campaign outputs (until explicitly frozen)
-experiments/**/runs/
-campaigns/
-campaign_logs/
-raw_logs/
+**/runs/
 ollama_outputs/
 model_outputs/
 inference_logs/
 llm_outputs/
 
-# Private / manuscript (must not enter public repo)
+# Never publish
 private/
 author_notes/
 paper/
+contribution/
 manuscript/
-submission/
-drafts/
-*.draft.md
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Secrets
+.env
 secrets/
-credentials/
-*.local
+
+# Frozen data ignored until explicit release (keep README + .gitkeep)
+data/frozen/**/*
+!data/frozen/README.md
+!data/frozen/.gitkeep
+
+data/examples/**/*
+!data/examples/README.md
+!data/examples/.gitkeep
+
+results/**/*
+!results/README.md
+!results/summaries/README.md
+!results/summaries/.gitkeep
+!results/tables/README.md
+!results/tables/.gitkeep
+!results/figures/README.md
+!results/figures/.gitkeep
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
